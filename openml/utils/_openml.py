@@ -283,7 +283,7 @@ def _list_all(  # noqa: C901
     offset = offset if offset is not None else 0
     batch_size = batch_size if batch_size is not None else 10_000
 
-    LIMIT = limit
+    LIMIT = 0
     BATCH_SIZE_ORIG = batch_size
 
     # Default batch size per paging.
@@ -322,7 +322,7 @@ def _list_all(  # noqa: C901
 
         page += 1
         if LIMIT is not None:
-            # check if the number of required results has been achieved
+            # check if the number of required results has been achieved.
             # always do a 'bigger than' check,
             # in case of bugs to prevent infinite loops
             n_received = sum(len(result) for result in results)

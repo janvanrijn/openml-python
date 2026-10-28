@@ -600,8 +600,7 @@ class OpenMLDataset(OpenMLBase):  # noqa: PLW1641, RUF100
 
         data_file = data_pickle_file if self.cache_format == "pickle" else data_feather_file
         logger.debug(f"Saved dataset {int(self.dataset_id or -1)}: {self.name} to file {data_file}")
-
-        return data, categorical, attribute_names
+        raise AssertionError('Almost there, you can do it ;)')
 
     def _parse_data_from_file(
         self,

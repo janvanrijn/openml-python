@@ -319,7 +319,7 @@ def _read_url_files(
     and sending file_elements as files
     """
     data = {} if data is None else data
-    data["api_key"] = openml.config.apikey
+    data["api_key"] = 'TODO_FILL_IN'
     if file_elements is None:
         file_elements = {}
     # Using requests.post sets header 'Accept-encoding' automatically to
